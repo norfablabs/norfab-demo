@@ -1,0 +1,47 @@
+# Virtual environments
+.venv/
+venv/
+env/
+.env/
+norfab-env/
+*-venv/
+*-env/
+
+# Local NorFab environments (at any depth)
+__norfab__/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+
+# Packaging and build output
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+pip-wheel-metadata/
+
+# Test environments and coverage
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+
+# Local settings and notebook checkpoints
+.env
+.env.*
+!.env.example
+!.env.sample
+.python-version
+.ipynb_checkpoints/
