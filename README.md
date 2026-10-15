@@ -20,23 +20,23 @@ This guide walks through the following steps:
 
 ## Setup
 
-Colne this repository:
+Clone this repository:
 
 ```bash
 git clone https://github.com/norfablabs/norfab-demo.git
 ```
 
-1. Install Docker and Containerlab on the lab host and make the Cisco IOS IOL image
-    available and update netbox design file accordingly, e.g. `vrnetlab/cisco_iol:17.16.1a`
-2. Setup and configure NetBox with the Branching and BGP plugins and the BGP session
-   `vrf` custom field. Set the URL and token in `.env`; the token needs
+1. Install Docker and Containerlab on the lab host, make a Cisco IOS IOL image
+   available (e.g., `vrnetlab/cisco_iol:17.16.1a`), and update the NetBox design file accordingly.
+2. Set up and configure NetBox with the Branching and BGP plugins and the BGP session
+   `vrf` custom field. Set the URL and token in `.env`. The token needs
    permissions to create records and branches.
 3. Set the broker endpoint in `inventory.yaml`. For a local deployment, include
    `containerlab-worker-1` in `topology.workers`. For a remote worker, start it
    separately against the same broker and omit it from the local worker list.
    Nornir must be able to reach the lab's published SSH ports.
-4. Install NorFab following [this guide](https://docs.norfablabs.com/norfab_installation/)
-5. Activate Python Virtual enviroment if installed into virtual environment and start NFCLI:
+4. Install NorFab by following [this guide](https://docs.norfablabs.com/norfab_installation/).
+5. If you installed NorFab in a Python virtual environment, activate it, then start NFCLI:
 
 ```bash
 cd norfab
@@ -83,7 +83,7 @@ nornir cfg config nf://nornir/four_routers_ios_base.j2 workers nornir-worker-1 F
 nornir cfg config nf://nornir/four_routers_ios_base.j2 workers nornir-worker-1 FL R1 R2 R3 R4
 ```
 
-Review addresses before applying, especially when reusing an existing lab.
+Review the addresses before applying the configuration, especially when reusing an existing lab.
 The template configures core OSPF, iBGP, LLDP, and logging, plus a static
 `CUSTOMER-A` VRF. Customer peers are placeholders and are not deployed.
 
@@ -140,7 +140,7 @@ Destroy the lab before exiting NFCLI:
 containerlab destroy lab-name demo-4-routers
 ```
 
-Optionally delete branch `demo` through the NetBox UI. Exit NFCLI to stop the
+Optionally, delete branch `demo` through the NetBox UI. Exit NFCLI to stop the
 local broker and workers.
 
 ## Conclusion
