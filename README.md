@@ -20,6 +20,12 @@ This guide walks through the following steps:
 
 ## Setup
 
+Colne this repository:
+
+```bash
+git clone https://github.com/norfablabs/norfab-demo.git
+```
+
 1. Install Docker and Containerlab on the lab host and make the Cisco IOS IOL image
     available and update netbox design file accordingly, e.g. `vrnetlab/cisco_iol:17.16.1a`
 2. Setup and configure NetBox with the Branching and BGP plugins and the BGP session
@@ -30,7 +36,7 @@ This guide walks through the following steps:
    separately against the same broker and omit it from the local worker list.
    Nornir must be able to reach the lab's published SSH ports.
 4. Install NorFab following [this guide](https://docs.norfablabs.com/norfab_installation/)
-5. Activate Python Virtual enviroment if installed into virtual enviroment and start NFCLI:
+5. Activate Python Virtual enviroment if installed into virtual environment and start NFCLI:
 
 ```bash
 cd norfab
