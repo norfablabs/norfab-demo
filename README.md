@@ -35,8 +35,9 @@ git clone https://github.com/norfablabs/norfab-demo.git
    `containerlab-worker-1` in `topology.workers`. For a remote worker, start it
    separately against the same broker and omit it from the local worker list.
    Nornir must be able to reach the lab's published SSH ports.
-4. Install NorFab by following [this guide](https://docs.norfablabs.com/norfab_installation/).
-5. If you installed NorFab in a Python virtual environment, activate it, then start NFCLI:
+4. Install NorFab by following [this guide](https://docs.norfablabs.com/norfab_installation/), skip
+   creation of NorFab folder with inventory, its already part of this repo
+6. If you installed NorFab in a Python virtual environment, activate it, then start NFCLI:
 
 ```bash
 cd norfab
